@@ -1,0 +1,25 @@
+{
+  "name": "POO-BD",
+  "version": "1.0.0",
+  "description": "Você está vendo meu primeiro projeto no GitHub.",
+  "main": "crud.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luledra/poo_bd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luledra/poo_bd/issues"
+  },
+  "homepage": "https://github.com/luledra/poo_bd#readme"
+}
