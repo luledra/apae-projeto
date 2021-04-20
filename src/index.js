@@ -1,26 +1,24 @@
-// importar a conexão criada
+// Importar a conexão criada
 const db = require("./db");
-// importar a tabela criada
+// Importar as tabelas criada
 const Aluno = require("./model/Aluno");
 const Deficiencia = require("./model/Deficiencia");
 const Responsavel = require("./model/Responsavel");
 const AlunoResponsavel = require("./model/AlunoResponsavel");
+const DAO = require("./service/DAO");
 
-// sincronizar a tabela criada com o banco de dados do heroku
+// Sincronizar as tabelas criada com o banco de dados do heroku
 async function sincronizar() {
     await db.sync();
 }
 
 // sincronizar();
 
-// inserir objetos na tabela criada
-async function inserir(obj) {
-    let res = await Ingrediente.create(obj);
-    console.log(res);
-}
-
-// realizar consultas na tabela criada
-async function consultar() {
-    let res = await Ingrediente.findAll();
-    console.log(res);
-}
+// Testar o DAO
+const deficiencia = new DAO(Deficiencia);
+deficiencia.create({id: 101, nome: "Síndrome de Down"});
+deficiencia.read();
+deficiencia.read(101);
+deficiencia.update(101, {id: 101, nome: "Paralisia Cerebral"});
+deficiencia.update(100, {nome: "Síndrome de Down"});
+deficiencia.delete(101);
