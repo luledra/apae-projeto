@@ -15,10 +15,16 @@ async function sincronizar() {
 // sincronizar();
 
 // Testar o DAO
-const deficiencia = new DAO(Deficiencia);
+/* const deficiencia = new DAO(Deficiencia);
 deficiencia.create({id: 101, nome: "Síndrome de Down"});
 deficiencia.read();
 deficiencia.read(101);
 deficiencia.update(101, {id: 101, nome: "Paralisia Cerebral"});
 deficiencia.update(100, {nome: "Síndrome de Down"});
-deficiencia.delete(101);
+deficiencia.delete(101); */
+const responsavel = new DAO(Responsavel);
+responsavel.create({nome: "Bruna Fernanda", foto: "sop02mao3tq"})
+responsavel.read(3);
+responsavel.read();
+responsavel.update(101);
+responsavel.delete();
